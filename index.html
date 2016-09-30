@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head
+  content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+  <title>SwipeJobs | Jobs Available</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/swipejobs.css" rel="stylesheet">
+</head>
+
+<body ng-app="SwipeJobsApp">
+  <div class="container-fluid main_container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="#">SwipeJobs</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="./">Link1<span class="sr-only">
+            (current)</span></a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link4</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+    <!-- Header component to show the idea at the top -->
+    <header role="banner" class="main_header">
+      <div class="container-fluid">
+        <h3>Available Jobs</h3>
+      </div>
+    </header>
+
+
+    <main ng-controller="JobController">
+      <div class="container company_info">
+        <div class="row">
+          <div class="col-xs-4 user_image">
+            <img class="img-responsive avatar" ng-src="{{jobs.company.logo}}">
+          </div><!--/ .col-xs-6 -->
+          <div class="col-xs-8 job_title">
+            <header>
+              <h4 ng-bind="jobs.title"></h4>
+              <p class="text-muted">
+                <span ng-bind="jobs.company.name"></span>
+                <br>
+                {{jobs.wagePerHourInCents/100 | currency}} per hour
+                <br><br>
+                <strong>{{jobStartDate | date : 'EEE, MMM d'}} - {{jobEndDate | date : 'EEE, MMM d'}}</strong>
+              </p>
+            </header>
+          </div><!--/ .col-xs-8 -->
+        </div><!--/.row -->
+      </div>
+      <div class="row timings">
+        <h4>
+          If you take this job you are agreeing to work ALL {{total}} DAYS.
+        </h4>
+
+
+          <table class="shifts">
+            <tr ng-repeat="date in jobs.shifts">
+              <td width="25%">{{date.startDate | date : 'EEE'}}</td>
+              <td width="35%">{{date.startDate | date : 'MMM d'}}</td>
+              <td>{{date.startDate | date : 'h:mm a'}} PST</td>
+            </tr>
+          </table>
+
+      </div><!--/ .timings -->
+      <div class="row location">
+
+        <h4>Location</h4>
+        <span class="info">{{jobs.company.address}}</span>
+      </div>
+
+      <div class="row branch">
+        <h4>Branch:</h4>
+        <p class="text-muted lead">{{jobs.branch}}</p>
+        <span class="info">{{jobs.branchPhoneNumber}}</span>
+      </div><!--/ .row -->
+
+    </main>
+
+    <footer class="footer">
+      <div class="row">
+        <div class="col-xs-6 col-btn">
+          <button class="btn btn-xs btn-linktype">NO THANKS</button>
+        </div><!--/ .col-xs-6 -->
+        <div class="col-xs-6 col-btn">
+          <button class="btn btn-xs btn-linktype">I'LL TAKE IT</button>
+        </div><!--/ .col-xs-6 -->
+      </div><!--/ .row -->
+    </footer>
+
+  </div> <!-- /container -->
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+/*
+* COLOURS USED
+* ------------
+* Nav bar color: #3a4055;
+* Header color: #4bbbeb;
+* Body background: #f8f8f8;
+* Secondary text: #4bbbeb;
+* Regular text: #bbb;
+*/
+
+body{
+  margin: 0 auto; //center align content
+}
+
+.logo{
+  margin-right: 30px; //space between logo and links
+}
+
+.main_container {
+  padding: 0;
+  max-width: 468px; //restricting the container size to mobile, since desktop vsd is not available
+  min-width: 376px;
+  border: 1px solid #bbb;
+  background-color: #f8f8f8;
+}
+
+.row {
+  max-width: 468px;
+}
+
+.main_header{
+  background: #4bbbeb;
+  color: #fff;
+  padding: 10px 0;
+  display: block;
+}
+
+.main_header h3{
+  font-weight: normal;
+
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #3a4055;
+  border-color: #3a4055;
+}
+
+.navbar-default .navbar-brand {
+  padding-left: 15px;
+  font-family: cursive;   //just giving some random font for logo
+  font-size: 2em;
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #4bbbeb;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #bbb;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main {
+  padding: 10px 15px 0 15px;
+}
+
+.avatar{
+  width: 100%;
+  height: auto;
+}
+
+
+.user_image {
+  padding: 0;
+}
+
+.job_title{
+  vertical-align: middle;
+  clear: right;
+}
+
+.timings, .location, .branch{
+  position: relative;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.timings > ul > li{
+  list-style: none;
+}
+
+/*ul > li:nth-child(2n){
+background-color: #4bbbeb;
+}*/
+
+.info {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #4bbbeb;
+  text-decoration: underline;
+}
+
+table{
+  margin: 10px;
+}
+
+.btn-linktype{
+  background-color: transparent;
+  color: #4bbbeb;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.btn-linktype:hover{
+  color: #3a4055;
+}
+
+.col-btn {
+  text-align: center;
+}
+
+.footer{
+  padding: 15px;
+  font-size: 0.5em;
+}
+
+
+.navbar-collapse li a {
+  background: #3a4055;
+  color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: transparent;;
+    border: none;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover > .icon-bar {
+    background-color: #3a4055;
+}
